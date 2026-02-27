@@ -1,6 +1,6 @@
 import type { ResultSetHeader, RowDataPacket } from "mysql2";
-import databaseClient from "../../../database/client";
-import type { Rows } from "../../../database/client";
+import databaseClient from "../../database/client";
+import type { Rows } from "../../database/client";
 
 class ActivityRepository {
   async create(activity: ActivityForm) {
