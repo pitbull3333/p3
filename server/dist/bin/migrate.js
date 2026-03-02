@@ -8,7 +8,7 @@ require("dotenv/config");
 const node_fs_1 = __importDefault(require("node:fs"));
 const node_path_1 = __importDefault(require("node:path"));
 // Build the path to the schema SQL file
-const schema = node_path_1.default.join(__dirname, "../../server/database/schema.sql");
+const schema = node_path_1.default.resolve(__dirname, "../database/schema.sql");
 // Get database connection details from .env file
 const { DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
 // Update the database schema
