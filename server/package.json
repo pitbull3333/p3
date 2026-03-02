@@ -4,7 +4,7 @@
     "dev": "tsx watch src/main.ts",
     "build": "tsc",
     "start": "node dist/main.js",
-    "db:migrate": "tsx ./bin/migrate",
+    "db:migrate": "tsx ./src/bin/migrate",
     "db:seed": "tsx ./bin/seed"
   },
   "dependencies": {
