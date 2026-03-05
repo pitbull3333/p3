@@ -8,6 +8,7 @@ import { useAuth } from "../context/AuthContext";
 
 const LIMIT = 10;
 
+
 function Home() {
   const [activities, setActivities] = useState<Activity[]>([]);
   const { auth } = useAuth();
