@@ -86,7 +86,7 @@ function ActivityCard({
         >
           {!activity.visibility && (
             <div className="icon-lock">
-              <img src="/icons/lock.png" alt="lock" />
+              <img src={`${import.meta.env.BASE_URL}icons/lock.png`} />
             </div>
           )}
           <div className="overlay-img"> </div>
@@ -100,7 +100,7 @@ function ActivityCard({
           </p>
         </div>
         <div className="important-info">
-          <img src="/icons/calendar.png" alt="icon-calendar" />
+          <img src={`${import.meta.env.BASE_URL}icons/calendar.png`} alt="icon-calendar" />
           <p>
             {formattedPlayingAt.charAt(0).toUpperCase() +
               formattedPlayingAt.slice(1)}
