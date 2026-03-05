@@ -15,7 +15,7 @@ function NavBar() {
         <div className="top-navbar">
           <div className="hello">
             <NavLink to="/">
-              <img src="/logo.png" alt="logo teamup" />
+              <img src={`${import.meta.env.BASE_URL}/logo.png`} alt="logo teamup" />
             </NavLink>
             <p>Bonjour</p>
             {auth && <p>{auth.user.username}</p>}

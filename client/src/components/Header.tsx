@@ -12,7 +12,7 @@ function Header() {
         {auth && <p>{auth.user.username}</p>}
       </div>
       <NavLink to="/">
-        <img src="/logo.png" alt="logo team up" />
+        <img src={`${import.meta.env.BASE_URL}/logo.png`} alt="logo team up" />
       </NavLink>
       {auth && (
         <Link to="/messenger" className="btn-chat">
