@@ -1,14 +1,14 @@
 {
-  "name": "p3-remote-vert-teamup",
+  "name": "p3",
   "version": "0.0.1",
   "description": "",
-  "homepage": "https://github.com/  (hit Enter to use an empty string)/p3-remote-vert-teamup#readme",
+  "homepage": "https://github.com/  (hit Enter to use an empty string)/p3#readme",
   "bugs": {
-    "url": "https://github.com/  (hit Enter to use an empty string)/p3-remote-vert-teamup/issues"
+    "url": "https://github.com/  (hit Enter to use an empty string)/p3/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/  (hit Enter to use an empty string)/p3-remote-vert-teamup.git"
+    "url": "git+https://github.com/  (hit Enter to use an empty string)/p3.git"
   },
   "workspaces": ["client", "server"],
   "scripts": {
