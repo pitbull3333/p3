@@ -2,7 +2,7 @@ name: Deploy client to GitHub Pages
 
 on:
   push:
-    branches: [dev] # ton repo est sur dev par défaut
+    branches: [main]
     paths:
       - "client/**"
       - ".github/workflows/pages.yml"
