@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ActivityTabs from "../components/ActivityTabs.tsx";
-import "../styles/myActivity.css";
+import "../styles/MyActivity.css";
 import { useLocation } from "react-router";
 import ActivityCard from "../components/ActivityCard.tsx";
 import { useAuth } from "../context/AuthContext.tsx";

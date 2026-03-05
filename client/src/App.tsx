@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
-import "./styles/Reset.css";
-import "./styles/Variables.css";
+import "./styles/reset.css";
+import "./styles/variables.css";
 import "./styles/App.css";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";

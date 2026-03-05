@@ -2,7 +2,7 @@ import { Box, Button, TextField } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { muiTheme } from "../theme/muiTheme";
 import { useState } from "react";
-import "../styles/SignUp.css";
+import "../styles/signUp.css";
 import { Link, useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
