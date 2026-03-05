@@ -37,7 +37,10 @@ jobs:
         run: npm ci
 
       - name: Build client
-        run: npm run build --workspace=client
+          run: npm run build --workspace=client
+          env:
+            VITE_API_URL: ${{ secrets.VITE_API_URL }}
+            VITE_GOOGLE_MAPS_API_KEY: ${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}
 
       # Vite => client/dist
       - name: Upload Pages artifact
