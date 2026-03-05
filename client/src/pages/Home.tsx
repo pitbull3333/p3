@@ -13,7 +13,7 @@ function Home() {
   const { auth } = useAuth();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/activities?limit=${LIMIT}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/activities?limit=${LIMIT}`, {
       method: "GET",
       headers: auth?.token ? { Authorization: `Bearer ${auth.token}` } : {},
     })

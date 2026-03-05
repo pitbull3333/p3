@@ -32,7 +32,7 @@ function SearchBar({ setFilters, filters }: SearchBarProps) {
     setActivitiesOnDropdown((prev) => ({ ...prev, sport: e.target.value }));
 
     if (e.target.value.length > 0) {
-      fetch(`${import.meta.env.VITE_API_URL}/api/sports?name=${e.target.value}`)
+      fetch(`${import.meta.env.VITE_API_URL}/sports?name=${e.target.value}`)
         .then((response) => response.json())
         .then((sports) => {
           setSports(sports);

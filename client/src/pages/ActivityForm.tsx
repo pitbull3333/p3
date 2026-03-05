@@ -50,7 +50,7 @@ function ActivityForm() {
   const { auth } = useAuth();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/sports`)
+    fetch(`${import.meta.env.VITE_API_URL}/sports`)
       .then((res) => res.json())
       .then((sports) => setSports(sports))
       .catch(() =>
@@ -123,7 +123,7 @@ function ActivityForm() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/activities`,
+        `${import.meta.env.VITE_API_URL}/activities`,
         {
           method: "POST",
           headers: {
@@ -162,7 +162,7 @@ function ActivityForm() {
     setError((prev) => ({ ...prev, addActivity: "" }));
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/users?email=${guestInput}`,
+        `${import.meta.env.VITE_API_URL}/users?email=${guestInput}`,
       );
 
       if (response.status === StatusCodes.OK) {
@@ -195,7 +195,7 @@ function ActivityForm() {
   };
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/activities?limit=${LIMIT}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/activities?limit=${LIMIT}`, {
       method: "GET",
       headers: auth?.token ? { Authorization: `Bearer ${auth.token}` } : {},
     })
