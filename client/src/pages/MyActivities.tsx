@@ -26,7 +26,7 @@ function MyActivities() {
       return;
     }
     fetch(
-      `${import.meta.env.VITE_API_URL}/me/activities?status=${selectedTab}`,
+      `${import.meta.env.VITE_API_URL}/api/me/activities?status=${selectedTab}`,
       {
         method: "GET",
         headers: {

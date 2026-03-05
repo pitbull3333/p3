@@ -27,7 +27,7 @@ function Messenger() {
   useEffect(() => {
     const load = async () => {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/participations?userId=${auth?.user.id}`,
+        `${import.meta.env.VITE_API_URL}/api/participations?userId=${auth?.user.id}`,
         {
           method: "GET",
           headers: {

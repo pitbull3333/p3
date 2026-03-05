@@ -24,7 +24,7 @@ function ParticipantsList({
   const { auth } = useAuth();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/participants?id=${activityId}`, {
+    fetch(`${import.meta.env.VITE_API_URL}/api/participants?id=${activityId}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ function ParticipantsList({
   async function addGuest() {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/users?email=${inputGuest}`,
+        `${import.meta.env.VITE_API_URL}/api/users?email=${inputGuest}`,
       );
 
       if (response.status === StatusCodes.NO_CONTENT) {
@@ -62,7 +62,7 @@ function ParticipantsList({
       };
 
       const invitationResponse = await fetch(
-        `${import.meta.env.VITE_API_URL}/participations`,
+        `${import.meta.env.VITE_API_URL}/api/participations`,
         {
           method: "POST",
           headers: {
@@ -114,7 +114,7 @@ function ParticipantsList({
   ) {
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/participations`,
+        `${import.meta.env.VITE_API_URL}/api/participations`,
         {
           method: "PUT",
           headers: {

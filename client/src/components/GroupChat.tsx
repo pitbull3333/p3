@@ -44,7 +44,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
     const getMessages = async () => {
       try {
         const res = await fetch(
-          `${import.meta.env.VITE_API_URL}/message?activityId=${activity.id}`,
+          `${import.meta.env.VITE_API_URL}/api/message?activityId=${activity.id}`,
           {
             method: "GET",
             headers: auth?.user
@@ -88,7 +88,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/message/poll?activityId=${activity.id}`,
+        `${import.meta.env.VITE_API_URL}/api/message/poll?activityId=${activity.id}`,
         {
           method: "GET",
           headers: {
@@ -125,7 +125,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/message`,
+        `${import.meta.env.VITE_API_URL}/api/message`,
         {
           method: "POST",
           headers: {
@@ -153,7 +153,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
   const addLike = async (m: MessageType) => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/message/likes`,
+        `${import.meta.env.VITE_API_URL}/api/message/likes`,
         {
           method: "POST",
           headers: {
@@ -188,7 +188,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
   const deleteMessage = async (m: MessageType) => {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/message/delete`,
+        `${import.meta.env.VITE_API_URL}/api/message/delete`,
         {
           method: "PUT",
           headers: {

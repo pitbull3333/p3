@@ -21,11 +21,11 @@ function ActivityDetails() {
   const { auth } = useAuth();
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/activities/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/activities/${id}`)
       .then((response) => response.json())
       .then((activity) => setActivity(activity));
 
-    fetch(`${import.meta.env.VITE_API_URL}/participants?id=${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/participants?id=${id}`)
       .then((response) => response.json())
       .then((participants) => setParticipants(participants));
   }, [id]);
@@ -109,7 +109,7 @@ function ActivityDetails() {
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/participations`,
+        `${import.meta.env.VITE_API_URL}/api/participations`,
         {
           method: "POST",
           headers: {
