@@ -230,7 +230,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
               className="like-btn"
               onClick={() => navigate("/messenger")}
             >
-              <img src="/icons/move-left.svg" alt="Move-left-arrow" />
+              <img src={`${import.meta.env.BASE_URL}icons/move-left.svg`} alt="Move-left-arrow" />
             </button>
             <p>
               {activity.sport_name} à{" "}
@@ -264,7 +264,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
                   className="like-btn"
                   onClick={() => addLike(m)}
                 >
-                  <img src="/icons/thumbs-up.svg" alt="Like" />
+                  <img src={`${import.meta.env.BASE_URL}icons/thumbs-up.svg`} alt="Like" />
                   <span className="like-count">
                     {m.like_count !== 0 && m.like_count}
                   </span>
@@ -275,7 +275,7 @@ function GroupChat({ activity: activityProp }: groupChatType) {
                     className="like-btn"
                     onClick={() => deleteMessage(m)}
                   >
-                    <img src="/icons/trash.svg" alt="delete img" />
+                    <img src={`${import.meta.env.BASE_URL}icons/trash.svg`} alt="delete img" />
                   </button>
                 )}
               </div>

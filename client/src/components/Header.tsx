@@ -16,7 +16,7 @@ function Header() {
       </NavLink>
       {auth && (
         <Link to="/messenger" className="btn-chat">
-          <img src="/icons/message.png" alt="icon message" />
+          <img src={`${import.meta.env.BASE_URL}icons/message.png`} alt="icon message" />
         </Link>
       )}
     </header>

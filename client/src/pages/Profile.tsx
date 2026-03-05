@@ -29,7 +29,7 @@ function Profile() {
   useEffect(() => {
     if (!auth) return;
 
-    fetch(`${import.meta.env.VITE_API_URL}/api/profile`, {
+    fetch(`${import.meta.env.VITE_API_URL}/profile`, {
       headers: {
         Authorization: `Bearer ${auth.token}`,
       },
@@ -70,10 +70,10 @@ function Profile() {
         </header>
 
         <section className="profile-rating">
-          <img src="/icons/star.png" alt="Avis" className="profile-icon" />
+          <img src={`${import.meta.env.BASE_URL}icons/star.png`} alt="Avis" className="profile-icon" />
           <span>5/5 - 9 avis</span>
           <img
-            src="/icons/voir-plus.png"
+            src={`${import.meta.env.BASE_URL}icons/coir-plus.png`}
             alt="Voir les avis"
             className="profile-chevron"
           />
@@ -83,7 +83,7 @@ function Profile() {
 
         <ul className="profile-info-list">
           <li className="profile-info-row">
-            <img src="/icons/mail.png" alt="Email" className="profile-icon" />
+            <img src={`${import.meta.env.BASE_URL}icons/mail.png`} alt="Email" className="profile-icon" />
             <a
               href={`mailto:${userProfile.email}`}
               className="profile-email-link"
@@ -93,7 +93,7 @@ function Profile() {
           </li>
           <li className="profile-info-row">
             <img
-              src="/icons/phone.png"
+              src={`${import.meta.env.BASE_URL}icons/phone.png`}
               alt="Téléphone"
               className="profile-icon"
             />
@@ -101,7 +101,7 @@ function Profile() {
           </li>
           <li className="profile-info-row">
             <img
-              src="/icons/localisation.png"
+             src={`${import.meta.env.BASE_URL}icons/localisation.png`}
               alt="Adresse"
               className="profile-icon"
             />
@@ -109,7 +109,7 @@ function Profile() {
           </li>
           <li className="profile-info-row">
             <img
-              src="/icons/anniversaire.png"
+             src={`${import.meta.env.BASE_URL}icons/anniversaire.png`}
               alt="Date de naissance"
               className="profile-icon"
             />
@@ -122,7 +122,7 @@ function Profile() {
         <ul className="profile-info-list">
           <li className="profile-info-row">
             <img
-              src="/icons/sport-pref.png"
+              src={`${import.meta.env.BASE_URL}icons/support-pref.png`}
               alt="Sport favori"
               className="profile-icon"
             />
@@ -130,7 +130,7 @@ function Profile() {
           </li>
           <li className="profile-info-row">
             <img
-              src="/icons/mains.png"
+             src={`${import.meta.env.BASE_URL}icons/mains.png`}
               alt="Membre depuis"
               className="profile-icon"
             />
@@ -143,39 +143,39 @@ function Profile() {
         <ul className="profile-action-list">
           <li className="profile-action-row">
             <img
-              src="/icons/cadena.png"
+              src={`${import.meta.env.BASE_URL}icons/cadena.png`}
               alt="Mot de passe"
               className="profile-icon"
             />
             <span>Changer mot de passe</span>
             <img
-              src="/icons/voir-plus.png"
+              src={`${import.meta.env.BASE_URL}icons/voir-plus.png`}
               alt="Aller"
               className="profile-chevron"
             />
           </li>
           <li className="profile-action-row">
             <img
-              src="/icons/desactive.png"
+              src={`${import.meta.env.BASE_URL}icons/desactive.png`}
               alt="Désactiver"
               className="profile-icon"
             />
             <span>Désactiver mon compte</span>
             <img
-              src="/icons/voir-plus.png"
+             src={`${import.meta.env.BASE_URL}icons/voir-plus.png`}
               alt="Aller"
               className="profile-chevron"
             />
           </li>
           <li className="profile-action-row">
             <img
-              src="/icons/supprime.png"
+              src={`${import.meta.env.BASE_URL}icons/supprime.png`}
               alt="Supprimer"
               className="profile-icon"
             />
             <span>Supprimer mon compte</span>
             <img
-              src="/icons/voir-plus.png"
+              src={`${import.meta.env.BASE_URL}icons/voir-plus.png`}
               alt="Aller"
               className="profile-chevron"
             />

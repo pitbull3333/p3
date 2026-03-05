@@ -36,11 +36,11 @@ function Home() {
         <div className="superwrapper">
           <div className="homepage-button-wrapper">
             <Link to="/activities/page/1">
-              <img src="/icons/search.png" alt="search" />
+              <img src={`${import.meta.env.BASE_URL}icons/search.png`} alt="search" />
               <p>Explore</p>
             </Link>
             <Link to={auth?.user ? "/publication" : "/sign-in"}>
-              <img src="/icons/add.png" alt="add" />
+              <img src={`${import.meta.env.BASE_URL}icons/add.png`} alt="add" />
               <p>Créé</p>
             </Link>
           </div>

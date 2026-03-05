@@ -105,9 +105,9 @@ function ActivityCard({
             {formattedPlayingAt.charAt(0).toUpperCase() +
               formattedPlayingAt.slice(1)}
           </p>
-          <img src="/icons/clock.png" alt="icon-clock" />
+          <img src={`${import.meta.env.BASE_URL}icons/clock.png`} alt="icon-clock" />
           <p>{activity.playing_time.slice(0, 5).replace(":", "h")}</p>
-          <img src="/icons/pin.png" alt="icon-pin" />
+          <img src={`${import.meta.env.BASE_URL}icons/pin.png`} alt="icon-pin" />
           <p>{activity.city}</p>
         </div>
         <div className="card-tags">
@@ -120,26 +120,26 @@ function ActivityCard({
           <p
             className={`card-tag ${!activity.disabled && "condition-missing"}`}
           >
-            <img src="/icons/disabled.png" alt="logo disabled" />
+            <img src={`${import.meta.env.BASE_URL}icons/disabled.png`} alt="logo disabled" />
             Handisport
           </p>
           <p className={`card-tag ${!activity.locker && "condition-missing"}`}>
-            <img src="/icons/locker.png" alt="logo locker" />
+            <img src={`${import.meta.env.BASE_URL}icons/locker.png`} alt="logo locker" />
             Vestiaires
           </p>
           <p className={`card-tag ${!activity.shower && "condition-missing"}`}>
-            <img src="/icons/shower.png" alt="logo shower" />
+            <img src={`${import.meta.env.BASE_URL}icons/shower.png`} alt="logo shower" />
             Douches
           </p>
           <p className={`card-tag ${!activity.toilet && "condition-missing"}`}>
-            <img src="/icons/toilet.png" alt="logo toilet" />
+            <img src={`${import.meta.env.BASE_URL}icons/toilet.png`} alt="logo toilet" />
             Toilettes
           </p>
           <p
             className={`card-tag ${!activity.air_conditioning && "condition-missing"}`}
           >
             <img
-              src="/icons/air-conditionning.png"
+              src={`${import.meta.env.BASE_URL}icons/air-conditionning.png`}
               alt="logo air conditionning"
             />
             Clim
@@ -147,7 +147,7 @@ function ActivityCard({
         </div>
         <div className="nb-participant">
           <p>
-            <img src="/icons/participants.png" alt="logo participants" />
+            <img src={`${import.meta.env.BASE_URL}icons/participants.png`} alt="logo participants" />
             {`${activity.nb_participant}/${activity.nb_spots} Participants`}
           </p>
           <p>{`${nbAvailableSpots < 0 ? "0" : nbAvailableSpots} ${nbAvailableSpots <= 1 ? "place restante" : "places restantes"}`}</p>
@@ -174,7 +174,7 @@ function ActivityCard({
             </div>
             {selectedTab === "incoming" && (
               <img
-                src="/icons/check.png"
+                src={`${import.meta.env.BASE_URL}icons/check.png`}
                 alt="validate"
                 className="tag-status"
               />
@@ -187,7 +187,7 @@ function ActivityCard({
                 {nbAvailableSpots === 0 ? (
                   <>
                     Complet
-                    <img src="/icons/bell.png" alt="logo alert" />
+                    <img src={`${import.meta.env.BASE_URL}icons/bell.png`} alt="logo alert" />
                   </>
                 ) : (
                   <p>Détails &gt;</p>
@@ -223,7 +223,7 @@ function ActivityCard({
             ) : selectedTab === "pending" &&
               activity.participation_status === "request" ? (
               <img
-                src="/icons/hourglass.png"
+                src={`${import.meta.env.BASE_URL}icons/hourglass.png`}
                 alt="pending"
                 className="tag-status"
               />
@@ -231,7 +231,7 @@ function ActivityCard({
               selectedTab === "pending" &&
               activity.participation_status === "refused" && (
                 <img
-                  src="/icons/cross.png"
+                  src={`${import.meta.env.BASE_URL}icons/cross.png`}
                   alt="refused"
                   className="tag-status"
                 />
@@ -248,7 +248,7 @@ function ActivityCard({
           >
             Participants
             <img
-              src="/icons/chevron.png"
+              src={`${import.meta.env.BASE_URL}icons/chevron.png`}
               alt=""
               className={`${participantsListIsOpen ? "rotate" : ""}`}
             />

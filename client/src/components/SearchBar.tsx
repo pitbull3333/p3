@@ -167,7 +167,7 @@ function SearchBar({ setFilters, filters }: SearchBarProps) {
           </ul>
         </article>
         <article>
-          <img src="/icons/calendar-input.svg" alt="Calendrier" />
+          <img src={`${import.meta.env.BASE_URL}icons/calendar-input.svg`} alt="Calendrier" />
           <input
             type="date"
             required
@@ -189,7 +189,7 @@ function SearchBar({ setFilters, filters }: SearchBarProps) {
             className="filter-button"
             onClick={openCriteriaModal}
           >
-            <img src="/icons/filters.png" alt="icon pour filtres" />
+            <img src={`${import.meta.env.BASE_URL}icons/filters.png`} alt="icon pour filtres" />
           </button>
         )}
 

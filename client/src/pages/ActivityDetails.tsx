@@ -147,7 +147,7 @@ function ActivityDetails() {
   return (
     <section className="activity-details">
       <button type="button" className="back-button" onClick={goBack}>
-        <img src="/icons/arrow-left.png" alt="" />
+        <img src={`${import.meta.env.BASE_URL}icons/arrow-left.png`} alt="" />
         Retour
       </button>
 
@@ -165,11 +165,11 @@ function ActivityDetails() {
 
       <section className="activity-schedule">
         <p className="activity-date">
-          <img src="/icons/calendar.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}icons/calendar.png`} alt="" />
           {formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1)}
         </p>
         <div className="activity-time">
-          <img src="/icons/clock.png" alt="" />
+          <img  src={`${import.meta.env.BASE_URL}icons/clock.png`} alt="" />
           <span>{startTime}</span>
           <div className="duration-bar">
             <span className="duration-label">{durationLabel}</span>
@@ -180,7 +180,7 @@ function ActivityDetails() {
 
       <section className="activity-location">
         <div className="address-info">
-          <img src="/icons/pin.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}icons/pin.png`} alt="" />
           <div>
             <p>Adresse</p>
             <p>
@@ -213,7 +213,7 @@ function ActivityDetails() {
             </button>
           </div>
           <p className="map-modal-address">
-            <img src="/icons/pin.png" alt="" />
+            <img src={`${import.meta.env.BASE_URL}icons/pin.png`} alt="" />
             {activity.address} {activity.zip_code} {activity.city}
           </p>
           <div className="map-iframe-container">
@@ -264,31 +264,31 @@ function ActivityDetails() {
           )}
           {!!activity.toilet && (
             <p className="tag">
-              <img src="/icons/toilet.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}icons/toilet.png`} alt="" />
               Toilettes
             </p>
           )}
           {!!activity.shower && (
             <p className="tag">
-              <img src="/icons/shower.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}icons/shower.png`} alt="" />
               Douches
             </p>
           )}
           {!!activity.locker && (
             <p className="tag">
-              <img src="/icons/locker.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}icons/locker.png`} alt="" />
               Vestiaires
             </p>
           )}
           {!!activity.disabled && (
             <p className="tag">
-              <img src="/icons/disabled.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}icons/disabled.png`} alt="" />
               Handisport
             </p>
           )}
           {!!activity.air_conditioning && (
             <p className="tag">
-              <img src="/icons/air-conditionning.png" alt="" />
+              <img src={`${import.meta.env.BASE_URL}icons/air-conditionnning.png`} alt="" />
               Clim
             </p>
           )}

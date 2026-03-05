@@ -153,7 +153,7 @@ function Activities() {
                     onClick={() => setSortOpen(true)}
                   >
                     <img
-                      src="/icons/Vector.svg"
+                      src={`${import.meta.env.BASE_URL}icons/Vector.svg`}
                       alt="sort-icon"
                       className="sort-icon"
                     />
@@ -169,7 +169,7 @@ function Activities() {
                     onKeyUp={(e) => e.key === "Enter" && setSortOpen(false)}
                   >
                     <img
-                      src="/icons/Vector.svg"
+                       src={`${import.meta.env.BASE_URL}icons/Vector.svg`}
                       alt="sort-icon"
                       className="sort-icon"
                     />
@@ -185,7 +185,7 @@ function Activities() {
                         className="sort-close-btn"
                         onClick={() => setSortOpen(false)}
                       >
-                        <img className="xbtn" src="/icons/x.svg" alt="Close" />
+                        <img className="xbtn" src={`${import.meta.env.BASE_URL}icons/x.svg`} alt="Close" />
                       </button>
                     </div>
 

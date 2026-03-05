@@ -177,11 +177,11 @@ function ParticipantsList({
             <p>{participant.username}</p>
           </div>
           {participant.status === "refused" ? (
-            <img src="/icons/cross.png" alt="refused" />
+            <img src={`${import.meta.env.BASE_URL}icons/cross.png`} alt="refused" />
           ) : participant.status === "accepted" ? (
-            <img src="/icons/check.png" alt="validate" />
+            <img src={`${import.meta.env.BASE_URL}icons/check.png`} alt="validate" />
           ) : participant.status === "inviting" ? (
-            <img src="/icons/hourglass.png" alt="pending" />
+            <img src={`${import.meta.env.BASE_URL}icons/hourglass.png`} alt="pending" />
           ) : nbAvailableSpots > 0 ? (
             <div>
               <button
@@ -248,7 +248,7 @@ function ParticipantsList({
               aria-label="Ajouter une personne"
               onClick={() => addGuest()}
             >
-              <img src="/icons/add.png" alt="" width="20" height="20" />
+              <img src={`${import.meta.env.BASE_URL}icons/add.png`} alt="" width="20" height="20" />
             </button>
           </div>
           {error && (
