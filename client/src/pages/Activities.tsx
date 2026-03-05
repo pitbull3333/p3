@@ -112,7 +112,7 @@ function Activities() {
       }).toString();
 
       const activitiesResponse = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/activities?page=${currentPage}&limit=${LIMIT}&${queryString}`,
+        `${import.meta.env.VITE_API_URL}/activities?page=${currentPage}&limit=${LIMIT}&${queryString}`,
         {
           method: "GET",
           headers: auth?.token ? { Authorization: `Bearer ${auth.token}` } : {},
