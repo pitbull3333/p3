@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import App from "./App.tsx";
 import Activities from "./pages/Activities";
 import ActivityDetails from "./pages/ActivityDetails";
@@ -11,7 +11,7 @@ import Home from "./pages/Home.tsx";
 import Messenger from "./pages/Messenger.tsx";
 import GroupChat from "./components/GroupChat.tsx";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     element: <App />,
     children: [
